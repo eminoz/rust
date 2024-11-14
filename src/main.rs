@@ -9,14 +9,14 @@ fn main() {
     println!("{}", a);
 
     let numbers = vec![24, 5, 6];
-    let numbers2 = [24, 5, 6,12,7];
+    let numbers2 = [24, 5, 6, 12, 7];
     let res = get_odds(&numbers);
     let res2 = get_odds(&numbers2);
 
-
-    print!("{:?}",res);
-    print!("{:?}",res2);
-    
+    print!("{:?}", res);
+    print!("{:?}", res2);
+let (a,b)=move_postition(32.0,12.8,2.4);
+    print!("{:?}",a)
 }
 
 fn greeting(name: &str) {
@@ -35,4 +35,11 @@ fn get_odds(numbers: &[i32]) -> Vec<i32> {
         }
     }
     result
+}
+
+fn move_postition(mut x: f32, mut y: f32, acceleration: f32) -> (f32, f32) {
+    x += acceleration;
+    y += acceleration;
+
+    (x, y)
 }
